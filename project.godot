@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="2D Platformer"
+config/name="Godot 2D Platformer"
 config/icon="res://icon.png"
 
 [display]
@@ -67,7 +67,6 @@ jump={
 2d_physics/layer_2="enemies"
 2d_physics/layer_3="coins"
 2d_physics/layer_4="world"
-2d_physics/layer_5="bumper"
 
 [physics]
 
