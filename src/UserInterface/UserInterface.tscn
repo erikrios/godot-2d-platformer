@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UserInterface/RetryButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UserInterface/UserInterface.gd" type="Script" id=6]
+[ext_resource path="res://assets/coin.png" type="Texture" id=7]
 
 [node name="UserInterface" type="Control"]
 pause_mode = 2
@@ -14,14 +15,34 @@ anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 6 )
 
-[node name="Label" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -204.0
+margin_left = -215.0
 margin_top = 55.0
-margin_right = -83.0
+margin_right = -45.0
+margin_bottom = 141.0
+color = Color( 0, 0, 0, 0.227451 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 8
+alignment = 1
+
+[node name="Coin" type="TextureRect" parent="ColorRect/HBoxContainer"]
+margin_left = 24.0
+margin_right = 91.0
 margin_bottom = 86.0
-text = "Score: %s"
+texture = ExtResource( 7 )
+stretch_mode = 4
+
+[node name="Score" type="Label" parent="ColorRect/HBoxContainer"]
+margin_left = 99.0
+margin_top = 27.0
+margin_right = 146.0
+margin_bottom = 58.0
+text = "005"
 align = 2
 
 [node name="PauseOverlay" type="ColorRect" parent="."]
