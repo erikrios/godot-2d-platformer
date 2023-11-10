@@ -36,8 +36,9 @@ margin_right = 228.5
 margin_bottom = 92.5
 
 [node name="PlayButton" parent="Menu" instance=ExtResource( 3 )]
+margin_bottom = 88.0
 next_scene_path = "res://src/Levels/Level01.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 4 )]
-margin_top = 94.0
+margin_top = 96.0
 margin_bottom = 185.0
